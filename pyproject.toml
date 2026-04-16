@@ -1,0 +1,15 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gluonts-probabilistic-planning"
+version = "0.1.0"
+description = "Turn probabilistic forecasting into a planning UI with uncertainty-aware allocations, error bands, and scenario notes for operators."
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

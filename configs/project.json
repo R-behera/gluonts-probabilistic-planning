@@ -1,0 +1,117 @@
+{
+  "slug": "gluonts-probabilistic-planning",
+  "title": "GluonTS Probabilistic Planning",
+  "project_type": "ml",
+  "domain": "Probabilistic Forecasting",
+  "summary": "Turn probabilistic forecasting into a planning UI with uncertainty-aware allocations, error bands, and scenario notes for operators.",
+  "tags": [
+    "gluonts",
+    "forecasting",
+    "probabilistic",
+    "planning"
+  ],
+  "accent": "#c82c60",
+  "secondary_accent": "#3b2ca9",
+  "dashboard_metrics": [
+    {
+      "label": "Model Lift",
+      "value": "64%",
+      "delta": "+6.4%"
+    },
+    {
+      "label": "Serving P95",
+      "value": "163ms",
+      "delta": "-12ms"
+    },
+    {
+      "label": "Data Freshness",
+      "value": "7h",
+      "delta": "steady"
+    }
+  ],
+  "sample_features": {
+    "engagement_score": 115,
+    "tenure_days": 309,
+    "payment_miss_count": 1,
+    "segment": "mid_market",
+    "priority_flag": true
+  },
+  "sample_metrics": {
+    "acquisition": 66.1,
+    "activation": 58.5,
+    "retention": 67.2,
+    "revenue": 117.7
+  },
+  "knowledge_base": [
+    "GluonTS Probabilistic Planning is positioned as a Probabilistic Forecasting starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Turn probabilistic forecasting into a planning UI with uncertainty-aware allocations, error bands, and scenario notes for operators.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on gluonts, forecasting, probabilistic, planning.",
+    "Source paper: GluonTS: Probabilistic and Neural Time Series Modeling in Python",
+    "Official repo: https://github.com/awslabs/gluonts",
+    "Production differentiation focus: Turn upstream probabilistic forecasting capabilities into a production-style application with operations-facing workflows.; Add deployment packaging, monitoring hooks, and screenshot-ready demos instead of notebook-only output.; Connect model behavior to concrete business decisions so the project is easier to evaluate and present."
+  ],
+  "research_key": "gluonts-probabilistic-planning",
+  "research_score": 9.68,
+  "paper_title": "GluonTS: Probabilistic and Neural Time Series Modeling in Python",
+  "paper_url": "https://arxiv.org/abs/1906.05264",
+  "repo_url": "https://github.com/awslabs/gluonts",
+  "repo_org": "awslabs",
+  "why_high_score": [
+    "Official or primary upstream repo with 5167 GitHub stars.",
+    "Active maintenance signal with recent push at 2026-03-17T15:56:22Z.",
+    "Probabilistic time series modeling in Python"
+  ],
+  "differentiation_hooks": [
+    "Turn upstream probabilistic forecasting capabilities into a production-style application with operations-facing workflows.",
+    "Add deployment packaging, monitoring hooks, and screenshot-ready demos instead of notebook-only output.",
+    "Connect model behavior to concrete business decisions so the project is easier to evaluate and present."
+  ],
+  "app_archetype": "planner",
+  "ui_profile": {
+    "layout": "stack",
+    "surface": "sand",
+    "font_stack": "\"Manrope\", \"Segoe UI\", sans-serif",
+    "radius": 20,
+    "shadow": 66,
+    "eyebrow_style": "solid",
+    "module_columns": 3,
+    "hero_align": "center",
+    "headline_mode": "tall"
+  },
+  "app_modules": [
+    {
+      "label": "Scenario 01",
+      "title": "Forecast Input Studio",
+      "description": "Model a planning scenario from the primary business and operational levers.",
+      "endpoint": "/score",
+      "input_mode": "json",
+      "cta": "Run Scenario",
+      "prefill": "{\n  \"features\": {\n    \"engagement_score\": 115,\n    \"tenure_days\": 309,\n    \"payment_miss_count\": 1,\n    \"segment\": \"mid_market\",\n    \"priority_flag\": true\n  }\n}",
+      "hint": "Forecast confidence and planning band will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Scenario 02",
+      "title": "Variance Explorer",
+      "description": "Explain how actual metrics differ from the expected planning baseline.",
+      "endpoint": "/analyze",
+      "input_mode": "json",
+      "cta": "Analyze Variance",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 66.1,\n    \"activation\": 58.5,\n    \"retention\": 67.2,\n    \"revenue\": 117.7\n  },\n  \"baseline\": {\n    \"acquisition\": 60.81,\n    \"activation\": 53.82,\n    \"retention\": 61.82,\n    \"revenue\": 108.28\n  }\n}",
+      "hint": "Variance summary and largest movement will appear here.",
+      "span": "wide"
+    },
+    {
+      "label": "Scenario 03",
+      "title": "Planning Memo",
+      "description": "Turn raw scenario inputs into a concise operational recommendation.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Draft Memo",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for GluonTS Probabilistic Planning.\",\n  \"features\": {\n    \"engagement_score\": 115,\n    \"tenure_days\": 309,\n    \"payment_miss_count\": 1,\n    \"segment\": \"mid_market\",\n    \"priority_flag\": true\n  },\n  \"metrics\": {\n    \"acquisition\": 66.1,\n    \"activation\": 58.5,\n    \"retention\": 67.2,\n    \"revenue\": 117.7\n  }\n}",
+      "hint": "Decision memo and next steps will appear here.",
+      "span": "normal"
+    }
+  ]
+}
