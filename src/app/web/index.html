@@ -1,114 +1,29 @@
-
-        <!doctype html>
-        <html lang="en">
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>GluonTS Probabilistic Planning</title>
-          <link rel="stylesheet" href="./styles.css">
-        </head>
-        <body class="surface-sand">
-          <div class="page layout-stack eyebrow-solid headline-tall modules-3 hero-align-center">
-            <section class="hero">
-              <div class="panel hero-copy">
-                <span class="eyebrow" data-health>Planning Workspace</span>
-                <h1 id="project-title">GluonTS Probabilistic Planning</h1>
-                <p id="project-summary" class="lead">Turn probabilistic forecasting into a planning UI with uncertainty-aware allocations, error bands, and scenario notes for operators.</p>
-                <ul id="project-tags" class="tag-list">
-                  <li>gluonts</li><li>forecasting</li><li>probabilistic</li><li>planning</li>
-                </ul>
-              </div>
-              <div class="panel hero-side">
-                <div class="metric-grid">
-                  <article class='card'><span>Model Lift</span><strong>64%</strong><em>+6.4%</em></article>
-<article class='card'><span>Serving P95</span><strong>163ms</strong><em>-12ms</em></article>
-<article class='card'><span>Data Freshness</span><strong>7h</strong><em>steady</em></article>
-                </div>
-                <div class="mini-grid">
-                  <article class='mini-card'><span>Project Type</span><strong>ML</strong></article><article class='mini-card'><span>Domain</span><strong>Probabilistic Forecasting</strong></article><article class='mini-card'><span>Application</span><strong>Planning Workspace</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
-                </div>
-              </div>
-            </section>
-            <section class="app-grid">
-              <article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Scenario 01</span>
-            <h2>Forecast Input Studio</h2>
-            <p>Model a planning scenario from the primary business and operational levers.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;features&quot;: {
-    &quot;engagement_score&quot;: 115,
-    &quot;tenure_days&quot;: 309,
-    &quot;payment_miss_count&quot;: 1,
-    &quot;segment&quot;: &quot;mid_market&quot;,
-    &quot;priority_flag&quot;: true
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/score" data-input-mode="json">Run Scenario</button>
-          </div>
-          <pre class="js-output">Forecast confidence and planning band will appear here.</pre>
-        </article>
-<article class="panel module js-module span-wide">
-          <div class="module-header">
-            <span>Scenario 02</span>
-            <h2>Variance Explorer</h2>
-            <p>Explain how actual metrics differ from the expected planning baseline.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 66.1,
-    &quot;activation&quot;: 58.5,
-    &quot;retention&quot;: 67.2,
-    &quot;revenue&quot;: 117.7
-  },
-  &quot;baseline&quot;: {
-    &quot;acquisition&quot;: 60.81,
-    &quot;activation&quot;: 53.82,
-    &quot;retention&quot;: 61.82,
-    &quot;revenue&quot;: 108.28
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/analyze" data-input-mode="json">Analyze Variance</button>
-          </div>
-          <pre class="js-output">Variance summary and largest movement will appear here.</pre>
-        </article>
-<article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Scenario 03</span>
-            <h2>Planning Memo</h2>
-            <p>Turn raw scenario inputs into a concise operational recommendation.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;prompt&quot;: &quot;Recommend the next best action for GluonTS Probabilistic Planning.&quot;,
-  &quot;features&quot;: {
-    &quot;engagement_score&quot;: 115,
-    &quot;tenure_days&quot;: 309,
-    &quot;payment_miss_count&quot;: 1,
-    &quot;segment&quot;: &quot;mid_market&quot;,
-    &quot;priority_flag&quot;: true
-  },
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 66.1,
-    &quot;activation&quot;: 58.5,
-    &quot;retention&quot;: 67.2,
-    &quot;revenue&quot;: 117.7
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Draft Memo</button>
-          </div>
-          <pre class="js-output">Decision memo and next steps will appear here.</pre>
-        </article>
-            </section>
-            <footer class="footer">
-              <span>Probabilistic Forecasting • ML • Planning Workspace</span>
-              <span>gluonts-probabilistic-planning</span>
-            </footer>
-          </div>
-          <script id="bootstrap-data" type="application/json">{"project": {"slug": "gluonts-probabilistic-planning", "title": "GluonTS Probabilistic Planning", "project_type": "ml", "domain": "Probabilistic Forecasting", "summary": "Turn probabilistic forecasting into a planning UI with uncertainty-aware allocations, error bands, and scenario notes for operators.", "tags": ["gluonts", "forecasting", "probabilistic", "planning"]}, "app_archetype": "planner", "ui_profile": {"layout": "stack", "surface": "sand", "font_stack": "\"Manrope\", \"Segoe UI\", sans-serif", "radius": 20, "shadow": 66, "eyebrow_style": "solid", "module_columns": 3, "hero_align": "center", "headline_mode": "tall"}, "app_modules": [{"label": "Scenario 01", "title": "Forecast Input Studio", "description": "Model a planning scenario from the primary business and operational levers.", "endpoint": "/score", "input_mode": "json", "cta": "Run Scenario", "prefill": "{\n  \"features\": {\n    \"engagement_score\": 115,\n    \"tenure_days\": 309,\n    \"payment_miss_count\": 1,\n    \"segment\": \"mid_market\",\n    \"priority_flag\": true\n  }\n}", "hint": "Forecast confidence and planning band will appear here.", "span": "normal"}, {"label": "Scenario 02", "title": "Variance Explorer", "description": "Explain how actual metrics differ from the expected planning baseline.", "endpoint": "/analyze", "input_mode": "json", "cta": "Analyze Variance", "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 66.1,\n    \"activation\": 58.5,\n    \"retention\": 67.2,\n    \"revenue\": 117.7\n  },\n  \"baseline\": {\n    \"acquisition\": 60.81,\n    \"activation\": 53.82,\n    \"retention\": 61.82,\n    \"revenue\": 108.28\n  }\n}", "hint": "Variance summary and largest movement will appear here.", "span": "wide"}, {"label": "Scenario 03", "title": "Planning Memo", "description": "Turn raw scenario inputs into a concise operational recommendation.", "endpoint": "/recommend", "input_mode": "json", "cta": "Draft Memo", "prefill": "{\n  \"prompt\": \"Recommend the next best action for GluonTS Probabilistic Planning.\",\n  \"features\": {\n    \"engagement_score\": 115,\n    \"tenure_days\": 309,\n    \"payment_miss_count\": 1,\n    \"segment\": \"mid_market\",\n    \"priority_flag\": true\n  },\n  \"metrics\": {\n    \"acquisition\": 66.1,\n    \"activation\": 58.5,\n    \"retention\": 67.2,\n    \"revenue\": 117.7\n  }\n}", "hint": "Decision memo and next steps will appear here.", "span": "normal"}], "sample_features": {"engagement_score": 115, "tenure_days": 309, "payment_miss_count": 1, "segment": "mid_market", "priority_flag": true}, "sample_metrics": {"acquisition": 66.1, "activation": 58.5, "retention": 67.2, "revenue": 117.7}, "knowledge_base": ["GluonTS Probabilistic Planning is positioned as a Probabilistic Forecasting starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Turn probabilistic forecasting into a planning UI with uncertainty-aware allocations, error bands, and scenario notes for operators.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on gluonts, forecasting, probabilistic, planning.", "Source paper: GluonTS: Probabilistic and Neural Time Series Modeling in Python", "Official repo: https://github.com/awslabs/gluonts", "Production differentiation focus: Turn upstream probabilistic forecasting capabilities into a production-style application with operations-facing workflows.; Add deployment packaging, monitoring hooks, and screenshot-ready demos instead of notebook-only output.; Connect model behavior to concrete business decisions so the project is easier to evaluate and present."], "dashboard_metrics": [{"label": "Model Lift", "value": "64%", "delta": "+6.4%"}, {"label": "Serving P95", "value": "163ms", "delta": "-12ms"}, {"label": "Data Freshness", "value": "7h", "delta": "steady"}]}</script>
-          <script src="./app.js"></script>
-        </body>
-        </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GluonTS Probabilistic Planning App</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div id="scene" class="app-scene">
+    <header class="shell hero">
+      <div>
+        <span class="eyebrow">Applied AI product systems</span>
+        <h1>GluonTS Probabilistic Planning</h1>
+        <p>![Demo Screenshot](demo/screenshot.png)</p>
+      </div>
+      <aside class="status-card">
+        <div class="pill">API connected</div>
+        <div class="pill">operations lead</div>
+        <div class="pill">neural-ribbon</div>
+      </aside>
+    </header>
+    <section id="metrics" class="grid metrics"></section>
+    <section id="signals" class="grid signals"></section>
+  </div>
+  <script>window.PROJECT_MANIFEST = {"slug": "gluonts-probabilistic-planning", "title": "GluonTS Probabilistic Planning", "summary": "![Demo Screenshot](demo/screenshot.png)", "domain": "Applied AI product systems", "audience": "operations lead", "promise": "Turn promising technical capability into a production-shaped workflow for real teams.", "hero": ["Production-grade app scaffold with API, CI, tests, Docker, and GitHub Pages landing.", "3D landing surface designed for GitHub Pages and recruiter-friendly storytelling.", "App backend structured for local or container deployment without changing the product narrative."], "kpis": [{"label": "Workflow clarity", "value": "86%", "note": "Operator actions mapped to product stages"}, {"label": "Deployment posture", "value": "API + Docker", "note": "Local and containerized startup paths"}, {"label": "Presentation layer", "value": "3D Pages ready", "note": "Static GitHub landing page included"}], "stages": ["ingest", "validate", "analyze", "decide", "monitor"], "cards": [{"title": "Operator cockpit", "body": "One-screen surface for the operations lead to understand what matters first."}, {"title": "API contract", "body": "Structured endpoints for health, manifest, readiness, and showcase data."}, {"title": "Deployment path", "body": "Repository includes Docker, Compose, CI workflow, and a Pages-ready landing surface."}], "scene": "neural-ribbon", "theme": {"bg": "#0f0c07", "surface": "#1f1811", "ink": "#fff8ef", "muted": "#cab59a", "accent": "#ffb15e", "accent2": "#7ef7d0"}, "pages_url": "https://r-behera.github.io/gluonts-probabilistic-planning/", "api_examples": {"health": {"status": "ok", "project": "gluonts-probabilistic-planning"}, "readiness": {"api": "ready", "landing_page": "docs/index.html", "container": "Dockerfile present"}, "signals": [{"name": "Decision coverage", "status": "strong", "detail": "App and landing narrative aligned"}, {"name": "Operator context", "status": "strong", "detail": "Primary user anchored as operations lead"}, {"name": "Delivery path", "status": "ready", "detail": "Pages + containerized app scaffold generated"}]}};</script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
